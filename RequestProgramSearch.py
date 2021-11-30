@@ -1,7 +1,10 @@
 import requests
 import json
 
-data = requests.get('https://www.googleapis.com/books/v1/volumes?q=vinci+inauthor:brown')
+wordInTitle = input('Type the title (or word in title)')
+author = input('Type the name of the author')
+
+data = requests.get(f'https://www.googleapis.com/books/v1/volumes?q={wordInTitle}+inauthor:{author}')
 
 print(data) #gets a response 200
 
